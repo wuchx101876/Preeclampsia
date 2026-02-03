@@ -73,15 +73,6 @@ library(ggplot2)
 library(ggpubr)
 library(ggprism)
 
-ggplot(data=use_data,aes(x=type,y=BACH1,fill=type))+
-  geom_boxplot()+
-  stat_compare_means(aes(label = ..p.signif..),method = "t.test",hide.ns = F)+
-  theme_prism()+
-  theme(legend.position = "none")+
-  labs(y="BACH1 expression",x= NULL,title = "GSE48424")+
-  scale_x_discrete(labels = c("Normal","PE"))
-
-
 
 ggplot(data = df, aes(x = type, y = BACH1 ,fill = type)) +
   geom_boxplot() +
