@@ -88,7 +88,7 @@ ggplot(data = df, aes(x = type, y = BACH1 ,fill = type)) +
 
 
 df <- use_data
-df$status <- ifelse(df$type == "PE",1,0)
+df$status <- ifelse(df$type == "PE",0,1)
 
 library(pROC)
 roc_obj <- roc(
